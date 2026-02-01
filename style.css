@@ -63,7 +63,7 @@
 .slide-title {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 40px;
     padding: 20px 20px;
     background: rgba(0,0,0,0.5);
     color: white;
@@ -78,7 +78,7 @@
     transform: translateY(-50%);
     background: rgba(255,255,255,0.7);
     border: none;
-    padding: 350px 20px;
+    padding: 370px 20px;
     cursor: pointer;
     font-size: 22px;
     border-radius: 5px;

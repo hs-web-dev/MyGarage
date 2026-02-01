@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;S
+  height: 100vh;
 }
 
 .container {
@@ -15,15 +15,18 @@ body {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  max-width: 1100px;
+  max-width: 1500px;
+  height: 600px;
   width: 90%;
   gap: 40px;
   align-items: center;
 }
 
 .car-image {
-  width: 50%;
-  border-radius: 10px;
+  width: 70%;
+  border-radius: 10px
+  height: 400px;
+  object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 

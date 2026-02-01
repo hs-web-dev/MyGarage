@@ -1,3 +1,20 @@
+.slider-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.separator {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  border: none;
+  border-top: 3px solid #d0d4dc;
+}
+
+
 /* ----- SLIDER ----- */
 .slider {
     position: relative;

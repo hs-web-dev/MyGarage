@@ -78,7 +78,7 @@
     transform: translateY(-50%);
     background: rgba(255,255,255,0.7);
     border: none;
-    padding: 300px 20px;
+    padding: 350px 20px;
     cursor: pointer;
     font-size: 22px;
     border-radius: 5px;
@@ -126,7 +126,7 @@ main {
 
 
 table {
-  width: 60%;              /* tableau plus étroit */
+  width: 50%;              /* tableau plus étroit */
   margin: 40px auto;       /* centré */
   border-collapse: collapse;
   background: #ffffff;

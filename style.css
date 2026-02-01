@@ -1,17 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
 .slider-title {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .separator {
-  width: 80%;
-  margin: 0 auto 30px auto;
+  width: 120px;
+  height: 4px;
+  background: #ff3b3b;
   border: none;
-  border-top: 3px solid #d0d4dc;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
 }
 
 

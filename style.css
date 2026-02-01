@@ -21,6 +21,14 @@
   border-radius: 2px;
 }
 
+.separator2 {
+  width: 2000px;
+  height: 4px;
+  background: black;
+  border: none;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
+}
 
 /* ----- SLIDER ----- */
 .slider {

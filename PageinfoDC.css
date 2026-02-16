@@ -80,20 +80,15 @@ body {
 
 .container {
   display: flex;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  max-width: 1800px;
-  height: 1200px;
-  width: 90%;
-  gap: 40px;
+  flex-direction: column; /* IMPORTANT */
   align-items: center;
+  gap: 40px;
 }
+
 
 .car-image {
   width: 70%;
-  border-radius: 10px
+  border-radius: 10px;
   height: 500px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);

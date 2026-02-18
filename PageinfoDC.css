@@ -102,7 +102,6 @@ tr:hover {
   background: #e8ecf2;
 }
 
-/* ----- BOUTON HOME À GAUCHE ----- */
 .home-btn {
     position: fixed;
     top: 20px;
@@ -115,7 +114,7 @@ tr:hover {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 .home-btn:hover {

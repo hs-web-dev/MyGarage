@@ -101,3 +101,25 @@ tr:nth-child(even) {
 tr:hover {
   background: #e8ecf2;
 }
+
+/* ----- BOUTON HOME À GAUCHE ----- */
+.home-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.home-btn:hover {
+    background: #ff3b3b;
+    padding-left: 25px;
+}
+

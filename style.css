@@ -170,7 +170,7 @@ ul {
   margin: 0;
   padding: 0;
   width: 130px;
-  background-color: #f1f1f1;
+  background-color: #818181;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -184,13 +184,11 @@ li a {
 }
 
 li a.active {
-  background-color: #04AA6D;
+  background-color: #000000;
   color: white;
 }
 
 li a:hover:not(.active) {
-  background-color: #555555;
+  background-color: #ff083d;
   color: white;
 }
-
-

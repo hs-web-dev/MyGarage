@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+.slider-title {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.separator {
+  width: 120px;
+  height: 4px;
+  background: #ff3b3b;
+  border: none;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
+}
+
+.separator2 {
+  width: 2000px;
+  height: 4px;
+  background: black;
+  border: none;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #1a1a1a;
+  padding: 40px;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+}
+
+ol, ul {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+ul li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.bulle {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bulle h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.bulle ol, .bulle ul {
+  font-size: 18px;
+  padding-left: 25px;
+}
+
+.bulle ul li {
+  list-style-type: disc;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #ff3b3b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}

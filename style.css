@@ -172,6 +172,8 @@ ul {
   width: 180px;
   background-color: #FFFFFF;
   position: fixed;
+  top: 0;          /* ← IMPORTANT */
+  left: 0;         /* ← pour être sûr qu’elle est collée à gauche */
   height: 110px;
   overflow: auto;
 }

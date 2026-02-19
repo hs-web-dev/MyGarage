@@ -169,19 +169,25 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 180px;
   background-color: #FFFFFF;
   position: fixed;
-  bottom: 0px;      /* ← COLLE LA BARRE EN BAS */
-  left: 0px;        /* ← COLLE À GAUCHE */
-  height: 110px;
-  overflow: auto;
+  top: 0px;         /* La barre est en haut */
+  left: 0px;
+  width: 100%;      /* Barre horizontale sur toute la largeur */
+  height: 50px;     /* Hauteur de la barre */
+  display: flex;    /* Les éléments se mettent sur une ligne */
+  align-items: center;
+}
+
+li {
+  margin: 0;
+  padding: 0;
 }
 
 li a {
   display: block;
   color: black;
-  padding: 8px 16px;
+  padding: 14px 20px; /* Ajuste la taille des boutons */
   text-decoration: none;
 }
 
@@ -195,8 +201,3 @@ li a:hover:not(.active) {
   color: white;
 }
 
-
-li a:hover:not(.active) {
-  background-color: #ff083d;
-  color: white;
-}

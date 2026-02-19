@@ -172,8 +172,8 @@ ul {
   width: 180px;
   background-color: #FFFFFF;
   position: fixed;
-  top: 0;          /* ← IMPORTANT */
-  left: 0;         /* ← pour être sûr qu’elle est collée à gauche */
+  bottom: 0px;      /* ← COLLE LA BARRE EN BAS */
+  left: 0px;        /* ← COLLE À GAUCHE */
   height: 110px;
   overflow: auto;
 }
@@ -189,6 +189,12 @@ li a.active {
   background-color: #000000;
   color: white;
 }
+
+li a:hover:not(.active) {
+  background-color: #ff083d;
+  color: white;
+}
+
 
 li a:hover:not(.active) {
   background-color: #ff083d;

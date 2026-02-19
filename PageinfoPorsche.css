@@ -1,4 +1,4 @@
-/* --- GLOBAL --- */
+
 body {
   margin: 0;
   padding: 0;
@@ -10,10 +10,10 @@ body {
   min-height: 100vh;
 }
 
-/* --- CONTAINER PRINCIPAL --- */
+
 .container {
   display: flex;
-  flex-direction: column;   /* IMPORTANT : met tout en colonne */
+  flex-direction: column;  
   background: white;
   padding: 30px;
   border-radius: 12px;
@@ -25,7 +25,7 @@ body {
   align-items: center;
 }
 
-/* --- IMAGE --- */
+
 .car-image {
   width: 80%;
   border-radius: 10px;
@@ -34,7 +34,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* --- INFO TEXTE + BOUTON --- */
+
 .info {
   width: 80%;
   display: flex;
@@ -71,7 +71,7 @@ h1 {
   background: #d62828;
 }
 
-/* --- TABLEAU --- */
+
 table {
   width: 80%;
   margin: 20px auto;

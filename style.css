@@ -30,7 +30,6 @@
   border-radius: 2px;
 }
 
-/* ----- SLIDER ----- */
 .slider {
     position: relative;
     width: 100%;
@@ -59,7 +58,6 @@
     object-fit: cover;
 }
 
-/* ----- TITRE SUR L'IMAGE ----- */
 .slide-title {
     position: absolute;
     bottom: 20px;
@@ -71,7 +69,6 @@
     border-radius: 5px;
 }
 
-/* ----- BOUTONS RECTANGULAIRES ----- */
 .arrow {
     position: absolute;
     top: 50%;
@@ -93,7 +90,6 @@
 .left { left: 0px; }
 .right { right: 0px; }
 
-/* ----- PAGE STYLE ----- */
 * {
     margin: 0;
     padding: 0;
@@ -126,12 +122,12 @@ main {
 
 
 table {
-  width: 50%;              /* tableau plus étroit */
-  margin: 40px auto;       /* centré */
+  width: 50%;              
+  margin: 40px auto;      
   border-collapse: collapse;
   background: #ffffff;
-  border-radius: 12px;     /* bords arrondis */
-  overflow: hidden;        /* arrondis visibles */
+  border-radius: 12px;     
+  overflow: hidden;        
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
@@ -171,11 +167,11 @@ ul {
   padding: 0;
   background-color: #EDEDED;
   position: fixed;
-  top: 0px;         /* La barre est en haut */
+  top: 0px;         
   left: 0px;
-  width: 100%;      /* Barre horizontale sur toute la largeur */
-  height: 50px;     /* Hauteur de la barre */
-  display: flex;    /* Les éléments se mettent sur une ligne */
+  width: 100%;      
+  height: 50px;     
+  display: flex;    
   align-items: center;
 }
 
@@ -187,7 +183,7 @@ li {
 li a {
   display: block;
   color: black;
-  padding: 14px 20px; /* Ajuste la taille des boutons */
+  padding: 14px 20px; 
   text-decoration: none;
 }
 

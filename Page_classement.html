@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Classement Voitures</title>
+  <link rel="stylesheet" href="Page_source.css">
+</head>
+<body>
+<a href="index.html" class="home-btn">Home</a>
+
+
+
+  <h1 class="slider-title">Classement des voitures</h1>
+  <hr class="separator">
+  <hr class="separator2">
+
+  <main>
+    <section class="bulle">
+      <h2>Classement dynamique</h2>
+      <div style="text-align:center; margin-bottom: 20px;">
+        <button onclick="trierListe('prix')">Trier par prix décroissant</button>
+        <button onclick="trierListe('vitesse')">Trier par vitesse décroissante</button>
+      </div>
+
+      <ol id="classementVoitures">
+        <li data-prix="65000" data-vitesse="327">Dodge Challenger SRT</li>
+        <li data-prix="250000" data-vitesse="296">Porsche GT3 RS</li>
+        <li data-prix="100000" data-vitesse="312">Chevrolet Corvette C8</li>
+        <li data-prix="4500000" data-vitesse="490">Bugatti Chiron</li>
+        <li data-prix="430000" data-vitesse="310">Lamborghini Huracan STO</li>
+        <li data-prix="275000" data-vitesse="341">McLaren 720S</li>
+        <li data-prix="10000000" data-vitesse="335">Mercedes CLK LM 1998</li>
+        <li data-prix="5000000" data-vitesse="370">Ferrari F40 LM</li>
+      </ol>
+    </section>
+
+      <script>
+    function trierListe(critere) {
+      const liste = document.getElementById("classementVoitures");
+      const elements = Array.from(liste.children);
+
+      elements.sort((a, b) => {
+        const valA = parseFloat(a.dataset[critere]);
+        const valB = parseFloat(b.dataset[critere]);
+        return valB - valA; // Tri décroissant
+      });
+
+      liste.innerHTML = "";
+      elements.forEach(el => {
+        const nom = el.textContent.split(" - ")[0];
+        const valeur = el.dataset[critere];
+        const unite = critere === "prix" ? "€" : "km/h";
+        const texte = `${nom} - ${valeur} ${unite}`;
+        const nouveau = document.createElement("li");
+        nouveau.dataset.prix = el.dataset.prix;
+        nouveau.dataset.vitesse = el.dataset.vitesse;
+        nouveau.textContent = texte;
+        liste.appendChild(nouveau);
+      });
+    }
+  </script>
+  </main>
+</body>

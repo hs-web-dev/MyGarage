@@ -1,4 +1,3 @@
-// Génération du QCM
 document.getElementById("qcmContainer").innerHTML = `
 <div class="qcm-box">
     <p>1️) Le slider utilise bien deux boutons ◀ et ▶ pour changer d’image.</p>
@@ -42,7 +41,6 @@ document.getElementById("qcmContainer").innerHTML = `
 `;
 
 
-// LOGIQUE
 let reponsesVF = {};
 
 function repondreVF(num, valeur){
@@ -52,7 +50,7 @@ function repondreVF(num, valeur){
 function corriger(){
     let score = 0;
 
-    // réponses correctes
+    
     const solutions = {
         q1: true,
         q2: "Bugatti Chiron",
@@ -61,26 +59,25 @@ function corriger(){
         q5: "vitesse"
     };
 
-    // Q1
+ 
     if(reponsesVF[1] === solutions.q1) score++;
 
-    // Q2
+  
     if(document.getElementById("q2").value === solutions.q2) score++;
 
-    // Q3
+ 
     const cochées = [...document.querySelectorAll(".q3:checked")].map(x=>x.value);
     if(JSON.stringify(cochées.sort()) === JSON.stringify(solutions.q3.sort())) score++;
 
-    // Q4
+    
     if(document.getElementById("q4").value.trim().toLowerCase() === solutions.q4) score++;
 
-    // Q5
+    
     if(document.getElementById("q5").value.trim().toLowerCase() === solutions.q5) score++;
 
-    // score
+    
     document.getElementById("scoreFinal").textContent = "Score : " + score + "/5";
 
-    // affichage réponses
     document.getElementById("reponses").innerHTML = `
     <h3>✔ Bonnes réponses :</h3>
     1️) Vrai<br>

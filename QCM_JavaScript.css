@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+.qcm-box {
+    background: white;
+    padding: 15px;
+    margin: 20px 0;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    animation: fadeZoom 1s ease-out;
+}
+
+/* Animation fade + zoom très visible */
+@keyframes fadeZoom {
+    0% { opacity: 0; transform: scale(0.7); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Animation shake très visible */
+.shake {
+    animation: shake 0.6s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-15px); }
+    40% { transform: translateX(15px); }
+    60% { transform: translateX(-15px); }
+    80% { transform: translateX(15px); }
+    100% { transform: translateX(0); }
+}
+
+.qcm-btn {
+    padding: 10px 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: #cacaca;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.qcm-btn:hover {
+    background: #a1a1a1;
+}
+
+#scoreFinal {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}

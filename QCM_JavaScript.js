@@ -79,7 +79,7 @@ function corriger(){
     document.getElementById("scoreFinal").textContent = "Score : " + score + "/5";
 
     document.getElementById("reponses").innerHTML = `
-    <h3>✔ Bonnes réponses :</h3>
+    <h3>Bonnes réponses :</h3>
     1️) Vrai<br>
     2️) Bugatti Chiron<br>
     3️) Voiture, Marque, Prix<br>

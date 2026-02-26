@@ -1,3 +1,4 @@
+// Génération du QCM
 document.getElementById("qcmContainer").innerHTML = `
 <div class="qcm-box">
     <p>1️) Le slider utilise bien deux boutons ◀ et ▶ pour changer d’image.</p>
@@ -6,7 +7,7 @@ document.getElementById("qcmContainer").innerHTML = `
 </div>
 
 <div class="qcm-box">
-    <p>2) Quelle voiture est la plus rapide dans le classement ?</p>
+    <p>2️) Quelle voiture est la plus rapide dans le classement ?</p>
     <select id="q2">
         <option value="">-- Choisir --</option>
         <option value="Bugatti Chiron">Bugatti Chiron</option>
@@ -25,67 +26,78 @@ document.getElementById("qcmContainer").innerHTML = `
 
 <div class="qcm-box">
     <p>4️) Quelle marque fabrique la Corvette C8 ?</p>
-    <input type="text" id="q4" placeholder="ex : Dodge, Peugeot">
+    <input type="text" id="q4">
 </div>
 
 <div class="qcm-box">
-    <p>5️) Quel critère exact permet de trier les voitures par vitesse ? (indice : trier par prix et par ...)</p>
-    <input type="text" id="q5" placeholder="mot exact attendu">
+    <p>5️) Quel critère exact permet de trier les voitures par vitesse ?</p>
+    <input type="text" id="q5">
 </div>
 
 <button class="qcm-btn" onclick="corriger()">Valider</button>
 <button class="qcm-btn" onclick="recommencer()">Recommencer</button>
 
 <p id="scoreFinal"></p>
+<div id="reponses"></div>
 `;
 
+
+// LOGIQUE
 let reponsesVF = {};
 
-function repondreVF(num, valeur) {
+function repondreVF(num, valeur){
     reponsesVF[num] = valeur;
 }
 
-function corriger() {
+function corriger(){
     let score = 0;
 
+    // réponses correctes
+    const solutions = {
+        q1: true,
+        q2: "Bugatti Chiron",
+        q3: ["Voiture","Marque","Prix"],
+        q4: "chevrolet",
+        q5: "vitesse"
+    };
 
-    if (reponsesVF[1] === true) score++;
+    // Q1
+    if(reponsesVF[1] === solutions.q1) score++;
 
- 
-    if (document.getElementById("q2").value === "Bugatti Chiron") score++;
+    // Q2
+    if(document.getElementById("q2").value === solutions.q2) score++;
 
+    // Q3
+    const cochées = [...document.querySelectorAll(".q3:checked")].map(x=>x.value);
+    if(JSON.stringify(cochées.sort()) === JSON.stringify(solutions.q3.sort())) score++;
 
-    const cochées = [...document.querySelectorAll(".q3:checked")].map(x => x.value);
-    if (
-        cochées.includes("Voiture") &&
-        cochées.includes("Marque") &&
-        cochées.includes("Prix") &&
-        cochées.length === 3
-    ) {
-        score++;
-    }
+    // Q4
+    if(document.getElementById("q4").value.trim().toLowerCase() === solutions.q4) score++;
 
+    // Q5
+    if(document.getElementById("q5").value.trim().toLowerCase() === solutions.q5) score++;
 
-    if (document.getElementById("q4").value.trim().toLowerCase() === "chevrolet") score++;
+    // score
+    document.getElementById("scoreFinal").textContent = "Score : " + score + "/5";
 
-
-    if (document.getElementById("q5").value.trim().toLowerCase() === "vitesse") score++;
-
-   
-    const scoreDiv = document.getElementById("scoreFinal");
-    scoreDiv.textContent = "Score final : " + score + "/5";
-
-   
-    if (score < 3) {
-        scoreDiv.classList.add("shake");
-        setTimeout(() => scoreDiv.classList.remove("shake"), 600);
-    }
+    // affichage réponses
+    document.getElementById("reponses").innerHTML = `
+    <h3>✔ Bonnes réponses :</h3>
+    1️) Vrai<br>
+    2️) Bugatti Chiron<br>
+    3️) Voiture, Marque, Prix<br>
+    4️) Chevrolet<br>
+    5️) vitesse
+    `;
 }
 
-function recommencer() {
-    document.querySelectorAll("input[type=text]").forEach(i => i.value = "");
-    document.querySelectorAll("input[type=checkbox]").forEach(i => i.checked = false);
-    document.getElementById("q2").value = "";
-    reponsesVF = {};
-    document.getElementById("scoreFinal").textContent = "";
+function recommencer(){
+    document.querySelectorAll("input").forEach(i=>{
+        if(i.type==="checkbox") i.checked=false;
+        else i.value="";
+    });
+    document.getElementById("q2").value="";
+    document.getElementById("scoreFinal").textContent="";
+    document.getElementById("reponses").innerHTML="";
+    reponsesVF={};
 }
